@@ -1,0 +1,65 @@
+.pie {
+	behavior: url(/PIE/PIE.php);
+}
+/* =heyCMSteam : Make sure this path stays absolute and is adjusted once you toss this in a theme folder deeper in the CMS's folder structure. */
+
+/* For image replacement */
+.ir() { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+/* Doesn't need the extraneous 'clearfix' class */ 
+.border-radius(@radius: 10px) {
+    -webkit-background-clip: padding-box;
+    -webkit-border-radius: @radius;
+    -moz-background-clip: padding-box;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    background-clip: padding-box;
+}
+.box-shadow(@values: 1px 2px 2px #ccc) {
+	-webkit-box-shadow: @values;
+	-moz-box-shadow: @values;
+	box-shadow: @values;
+}
+.gradient(@start: #333333, @stop: #999999) {
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: -webkit-linear-gradient(@start, @stop);
+    background: -moz-linear-gradient(center top, @start 0%, @stop 100%);
+    background: -moz-gradient(center top, @start 0%, @stop 100%);
+    -pie-background: linear-gradient(@start, @stop);
+	background: linear-gradient(@start, @stop);
+}
+.rotate(@deg:35) {
+	-webkit-transform: rotate(formatstring("{0}deg", @deg));
+	-moz-transform: rotate(formatstring("{0}deg", @deg));
+	-o-transform: rotate(formatstring("{0}deg", @deg));
+	-ms-transform: rotate(formatstring("{0}deg", @deg));
+	transform: rotate(formatstring("{0}deg", @deg));
+}
+.circle(@size:43px, @color-a:#DDF3FF, @color-b:#61D0FF, @shadow-color:#515C62) {
+	width: @size;
+	height: @size;
+	line-height:@size+3;
+	font-size:18px;
+	font-weight:bold;
+	padding:3px;
+	text-align:center;
+	display: block;
+	border:1px solid #00ADF4;
+	background-color:#DDF3FF;
+	color: #1F5FA2;
+	text-indent:1px;
+	cursor: pointer;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+	
+	.border-radius(@size);
+	.gradient(@color-a, @color-b);
+	.box-shadow(inset 1px 2px 1px @shadow-color);
+}
+.translate(@move_x: 10px, @move_y: 10px) {
+	-webkit-transform: translate(@move_x, @move_y);
+	-moz-transform: translate(@move_x, @move_y);
+	-o-transform: translate(@move_x, @move_y);
+	-ms-transform:translate(@move_x, @move_y);
+	transform: translate(@move_x, @move_y);
+}
