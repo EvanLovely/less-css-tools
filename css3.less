@@ -19,6 +19,15 @@
     -pie-background: linear-gradient(@start, @stop);
 	background: linear-gradient(@start, @stop);
 }
+/* @todo Expand above gradient mixin to allow other non-linear styles */
+.linear-gradient(@start: #333333, @stop: #999999) {
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: -webkit-linear-gradient(@start, @stop);
+    background: -moz-linear-gradient(center top, @start 0%, @stop 100%);
+    background: -moz-gradient(center top, @start 0%, @stop 100%);
+    -pie-background: linear-gradient(@start, @stop);
+	background: linear-gradient(@start, @stop);
+}
 .rotate(@deg:35) {
 	-webkit-transform: rotate(formatstring("{0}deg", @deg));
 	-moz-transform: rotate(formatstring("{0}deg", @deg));
