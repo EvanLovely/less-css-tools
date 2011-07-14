@@ -40,6 +40,32 @@
 	-webkit-transition: @arguments;
 	transition: @arguments;
 }
+.two-transitions(@property1:background, @property2:color, @duration:0.5s, @function:ease-in-out) {
+	-moz-transition-property: @property1, @property2;
+	-webkit-transition-property: @property1, @property2;
+	transition-property: @property1, @property2;
+	
+	-moz-transition-duration: @duration, @duration;
+	-webkit-transition-duration: @duration, @duration;
+	transition-duration: @duration, @duration;
+	
+	-moz-transition-timing-function: @function, @function;
+	-webkit-transition-timing-function: @function, @function;
+	transition-timing-function: @function, @function;
+}
+.three-transitions(@property1:background, @property2:color, @property3:border, @duration:0.5s, @function:ease-in-out) {
+	-moz-transition-property: @property1, @property2, @property3;
+	-webkit-transition-property: @property1, @property2, @property3;
+	transition-property: @property1, @property2, @property3;
+	
+	-moz-transition-duration: @duration, @duration, @duration;
+	-webkit-transition-duration: @duration, @duration, @duration;
+	transition-duration: @duration, @duration, @duration;
+	
+	-moz-transition-timing-function: @function, @function, @function;
+	-webkit-transition-timing-function: @function, @function, @function;
+	transition-timing-function: @function, @function, @function;
+}
 .translate(@move_x: 10px, @move_y: 10px) {
 	-webkit-transform: translate(@move_x, @move_y);
 	-moz-transform: translate(@move_x, @move_y);
