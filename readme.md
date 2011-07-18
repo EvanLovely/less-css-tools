@@ -1,4 +1,4 @@
-LESS CSS Toolkit
+[LESS CSS](http://lesscss.org) Toolkit
 ================
 
 A collection of mixins and other tools that provide quicker, more awesome Front End Development using CSS. 
