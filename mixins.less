@@ -60,8 +60,14 @@
 	word-spacing: normal;
 }
 .basic-gradient-darken(@color:#cccccc) {
-	.gradient(@color, darken(@color, 10%);
+	.gradient(@color, darken(@color, 10%));
+}
+.basic-gradient-darken-180(@color:#cccccc) {
+	.gradient(darken(@color, 10%), @color);
 }
 .basic-gradient-lighten(@color:#cccccc) {
-	.gradient(@color, lighten(@color, 10%);
+	.gradient(@color, lighten(@color, 10%));
+}
+.basic-gradient-lighten(@color:#cccccc) {
+	.gradient(lighten(@color, 10%), @color);
 }
