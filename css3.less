@@ -12,6 +12,7 @@
 	box-shadow: @values;
 }
 .gradient(@start: #333333, @stop: #999999) {
+	background:@start;
     background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
     background: -webkit-linear-gradient(@start, @stop);
     background: -moz-linear-gradient(center top, @start 0%, @stop 100%);
