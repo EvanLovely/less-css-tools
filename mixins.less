@@ -59,8 +59,8 @@
 	white-space: normal;
 	word-spacing: normal;
 }
-.basic-gradient-darken(@color:#cccccc) {
-	.gradient(@color, darken(@color, 10%));
+.basic-gradient-darken(@color:#cccccc, @strength:10%) {
+	.gradient(@color, darken(@color, @strength));
 }
 .basic-gradient-darken-180(@color:#cccccc) {
 	.gradient(darken(@color, 10%), @color);
@@ -71,3 +71,98 @@
 .basic-gradient-lighten-180(@color:#cccccc) {
 	.gradient(lighten(@color, 10%), @color);
 }
+
+.ribbon(@color:#999, @height: 20px) {
+    .gradient(rgba(255,255,255,0.1), rgba(0,0,0,.1));
+    background-color:@color;
+    height: @height;
+    margin:0 @height;
+    margin-top: -@height;
+    color:#fff;
+    text-align:center;
+    font-weight:bold;
+    line-height: @height;
+    text-shadow:0 1px #666;
+    position:relative;
+    -webkit-box-shadow:
+        0 1px 3px rgba(0,0,0,.3),
+        0 0 0 1px lighten(@color, 20%),
+        0 1px 0 lighten(@color, 50%) inset;
+    -moz-box-shadow:
+        0 1px 3px rgba(0,0,0,.3),
+        0 0 0 1px lighten(@color, 20%),
+        0 1px 0 lighten(@color, 50%) inset;
+    box-shadow:
+        0 1px 3px rgba(0,0,0,.3),
+        0 0 0 1px lighten(@color, 20%),
+        0 1px 0 lighten(@color, 50%) inset;
+
+        &:before, &:after {
+            content:'';
+            border:6px solid transparent;
+            position:absolute;
+            display:block;
+            width:0;
+            height:0;
+            top:100%;
+        }
+        &:before{
+            left:0;
+            border-top-color:lighten(@color, 30%);
+            border-left-width:7px;
+            border-right-width:0;
+        }
+
+        &:after {
+            right:0;
+            border-top-color:lighten(@color, 30%);
+            border-right-width:7px;
+            border-left-width:0;
+        }
+        .right, .left{
+            border:19px solid @color;
+            position:absolute;
+            display:block;
+            width:0; height:0;
+            top:7px;
+            z-index:-1;
+        }
+        .right {
+            -webkit-box-shadow:
+                0 1px 0 #777,
+                0 -1px 0 lighten(@color, 50%),
+                0 -2px 0 #777,
+                1px 0 0 #777;
+            -moz-box-shadow:
+                0 1px 0 #777,
+                0 -1px 0 lighten(@color, 50%),
+                0 -2px 0 #777,
+                1px 0 0 #777;
+            box-shadow:
+                0 1px 0 #777,
+                0 -1px 0 lighten(@color, 50%),
+                0 -2px 0 #777,
+                1px 0 0 #777;
+            border-left-color:transparent;
+            left:-32px;
+        }
+        .left {
+            -webkit-box-shadow:
+                0 1px 0 #777,
+                0 -1px 0 lighten(@color, 50%),
+                0 -2px 0 #777,
+                -1px 0 0 #777;
+            -moz-box-shadow:
+                0 1px 0 #777,
+                0 -1px 0 lighten(@color, 50%),
+                0 -2px 0 #777,
+                -1px 0 0 #777;
+            box-shadow:
+                0 1px 0 #777,
+                0 -1px 0 lighten(@color, 50%),
+                0 -2px 0 #777,
+                -1px 0 0 #777;
+            border-right-color:transparent;
+            right:-32px;
+        }
+    }
