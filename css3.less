@@ -36,7 +36,7 @@
 	-ms-transform: rotate(formatstring("{0}deg", @deg));
 	transform: rotate(formatstring("{0}deg", @deg));
 }
-.transition(@property:background, @duration:0.5s, @function:ease-in-out) {
+.transition(@property:background, @duration:@fade-time, @function:ease-in-out) {
 	-moz-transition: @arguments;
 	-webkit-transition: @arguments;
 	transition: @arguments;
