@@ -32,6 +32,14 @@
     -pie-background: linear-gradient(@start, @stop);
 	background: linear-gradient(@start, @stop);
 }
+.columns(@count:2, @gap:15px) {
+  -moz-column-count:@count;
+  -webkit-column-count:@count;
+  column-count:@count;
+  -moz-column-gap:@gap;
+  -webkit-column-gap:@gap;
+  column-gap:@gap;
+}
 .rotate(@deg:35) {
 	-webkit-transform: rotate(formatstring("{0}deg", @deg));
 	-moz-transform: rotate(formatstring("{0}deg", @deg));
