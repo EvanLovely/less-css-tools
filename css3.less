@@ -23,6 +23,14 @@
     -pie-background: linear-gradient(@start, @stop);
 	background: linear-gradient(@start, @stop);
 }
+.gradient-90(@start: #333333, @stop: #999999) {
+	background:@start;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, @start), color-stop(1, @stop));
+    background: -webkit-linear-gradient(left, @start 0%, @stop 100%);
+    background: -moz-linear-gradient(left, @start 0%, @stop 100%);
+    -pie-background: linear-gradient(left, @start 0%, @stop 100%);
+	background: linear-gradient(left, @start 0%, @stop 100%);
+}
 /* @todo Expand above gradient mixin to allow other non-linear styles */
 .linear-gradient(@start: #333333, @stop: #999999) {
     background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
