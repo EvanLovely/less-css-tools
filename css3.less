@@ -55,12 +55,12 @@
 	-ms-transform: rotate(formatstring("{0}deg", @deg));
 	transform: rotate(formatstring("{0}deg", @deg));
 }
-.transition(@property:background, @duration:@fade-time, @function:ease-in-out) {
+.transition(@property:background, @duration:0.2s, @function:ease-in) {
 	-moz-transition: @arguments;
 	-webkit-transition: @arguments;
 	transition: @arguments;
 }
-.two-transitions(@property1:background, @property2:color, @duration:0.5s, @function:ease-in-out) {
+.two-transitions(@property1:background, @property2:color, @duration:0.2s, @function:ease-in) {
 	-moz-transition-property: @property1, @property2;
 	-webkit-transition-property: @property1, @property2;
 	transition-property: @property1, @property2;
@@ -73,7 +73,7 @@
 	-webkit-transition-timing-function: @function, @function;
 	transition-timing-function: @function, @function;
 }
-.three-transitions(@property1:background, @property2:color, @property3:border, @duration:0.5s, @function:ease-in-out) {
+.three-transitions(@property1:background, @property2:color, @property3:border, @duration:0.2s, @function:ease-in) {
 	-moz-transition-property: @property1, @property2, @property3;
 	-webkit-transition-property: @property1, @property2, @property3;
 	transition-property: @property1, @property2, @property3;
