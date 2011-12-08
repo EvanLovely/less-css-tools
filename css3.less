@@ -69,12 +69,12 @@
 	transform: rotate(formatstring("{0}deg", @deg));
 }
 
-.transition(@transition) {
-     -webkit-transition: @transition;
-        -moz-transition: @transition;
-         -ms-transition: @transition;
-          -o-transition: @transition;
-             transition: @transition;
+.transition(@fade-time:0.2s, @fade-style:ease-in-out) {
+     -webkit-transition: @fade-time @fade-style all;
+        -moz-transition: @fade-time @fade-style all;
+         -ms-transition: @fade-time @fade-style all;
+          -o-transition: @fade-time @fade-style all;
+             transition: @fade-time @fade-style all;
 }
 
 .two-transitions(@property1:background, @property2:color, @duration:0.2s, @function:ease-in) {
