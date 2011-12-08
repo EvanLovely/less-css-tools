@@ -68,11 +68,15 @@
 	-ms-transform: rotate(formatstring("{0}deg", @deg));
 	transform: rotate(formatstring("{0}deg", @deg));
 }
-.transition(@property:background, @duration:0.2s, @function:ease-in) {
-	-moz-transition: @arguments;
-	-webkit-transition: @arguments;
-	transition: @arguments;
+
+.transition(@transition) {
+     -webkit-transition: @transition;
+        -moz-transition: @transition;
+         -ms-transition: @transition;
+          -o-transition: @transition;
+             transition: @transition;
 }
+
 .two-transitions(@property1:background, @property2:color, @duration:0.2s, @function:ease-in) {
 	-moz-transition-property: @property1, @property2;
 	-webkit-transition-property: @property1, @property2;
