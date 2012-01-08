@@ -153,3 +153,28 @@
   border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
+.ribbon-images(@bg1, @bg2, @bg3, @h) {
+  @h: 39px;
+  padding: 0 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  height: @h;
+  position: relative;
+  left: 31px;
+  background: e(%('url(%d) no-repeat left top', @bg1));
+  > span {
+    background: e(%('url(%d) repeat-x center top', @bg2));
+    height: @h;
+    padding-left: 5px;
+    display: inline-block;
+    > span {
+      background: url(../img/css/calc-total-ribbon-green-right.png) no-repeat right top;
+      background: e(%('url(%d) no-repeat right top', @bg3));
+      display: inline-block;
+      height: @h;
+      padding-right: 23px;
+      line-height: 30px;
+    }
+  }
+}
