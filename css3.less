@@ -26,15 +26,13 @@
     -pie-background: linear-gradient(left, @start 0%, @stop 100%);
     background-color: linear-gradient(left, @start 0%, @stop 100%);
   }
-  
   .radial(@innerColor: #555, @outerColor: #333)  {
     background-color: @outerColor;
-    background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
-    background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
-    background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
-    background-image: -ms-radial-gradient(circle, @innerColor, @outerColor);
-    background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
-    background-repeat: no-repeat;
+    background-color: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+    background-color: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+    background-color: -moz-radial-gradient(circle, @innerColor, @outerColor);
+    background-color: -ms-radial-gradient(circle, @innerColor, @outerColor);
+    background-color: -o-radial-gradient(circle, @innerColor, @outerColor);
   }
   .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
     background-color: @endColor;
