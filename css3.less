@@ -1,13 +1,7 @@
-.border-radius(@tl:10px, @tr:10px, @br:10px, @bl:10px) {
-    -webkit-background-clip: padding-box;
-    -webkit-border-bottom-left-radius: @bl;
-    -webkit-border-bottom-right-radius: @br;
-    -webkit-border-top-left-radius: @tl;
-    -webkit-border-top-right-radius: @tr;
-    -moz-background-clip: padding-box;
-    -moz-border-radius: @arguments;
-    border-radius: @arguments;
-    background-clip: padding-box;
+.border-radius(@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
 }
 .box-shadow(@values: 1px 2px 2px #ccc) {
 	-webkit-box-shadow: @values;
