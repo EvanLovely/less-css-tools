@@ -59,11 +59,10 @@
 .reset-filter() {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
-.opacity(@opacity: 100) {
-  filter: e(%("alpha(opacity=%d)", @opacity));
-  -khtml-opacity: @opacity / 100;
-    -moz-opacity: @opacity / 100;
-         opacity: @opacity / 100;
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
 }
 .basic-gradient-darken(@color:#cccccc, @strength:10%) {
 	#gradient > .vertical(@color, darken(@color, @strength));
