@@ -64,18 +64,6 @@
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
-.basic-gradient-darken(@color:#cccccc, @strength:10%) {
-	#gradient > .vertical(@color, darken(@color, @strength));
-}
-.basic-gradient-darken-180(@color:#cccccc, @strength:10%) {
-	#gradient > .vertical(darken(@color, @strength), @color);
-}
-.basic-gradient-lighten(@color:#cccccc, @strength:10%) {
-	#gradient > .vertical(@color, lighten(@color, @strength));
-}
-.basic-gradient-lighten-180(@color:#cccccc, @strength:10%) {
-	#gradient > .vertical(lighten(@color, @strength), @color);
-}
 // Add an alphatransparency value to any background or border color (via Elyse Holladay)
 #translucent {
   .background(@color: @white, @alpha: 1) {
