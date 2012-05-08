@@ -65,12 +65,12 @@
   -webkit-column-gap:@gap;
   column-gap:@gap;
 }
-.rotate(@deg:35) {
-	-webkit-transform: rotate(formatstring("{0}deg", @deg));
-	-moz-transform: rotate(formatstring("{0}deg", @deg));
-	-o-transform: rotate(formatstring("{0}deg", @deg));
-	-ms-transform: rotate(formatstring("{0}deg", @deg));
-	transform: rotate(formatstring("{0}deg", @deg));
+.rotate(@deg:35deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+  transform: rotate(@deg);
 }
 //Set as variables here so they can be overridden as variables per project
 @transition-time: 0.3s;
