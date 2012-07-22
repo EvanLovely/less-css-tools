@@ -90,3 +90,8 @@
        -o-background-size: @size;
           background-size: @size;
 }
+.transition(@property: all) {
+  -webkit-transition: @property @transition-style @transition-time;
+  -moz-transition: @property @transition-style @transition-time;
+  transition: @property @transition-style @transition-time;
+}
